@@ -9,7 +9,7 @@ st.title('Directed Negative Stance ')
 #Loading the data
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r"C:\Users\Sonja_Arbeit\PycharmProjects\pythonProject3\df_corr_lags.csv")
+    df = pd.read_csv(df_stances.csv")
     df['year1'] = df['year'].astype('datetime64[ns]')
     df['year1'] = df['year1'].dt.year
     return df
@@ -23,12 +23,8 @@ with st.container():
     filtered_df = df[(df['year1'] >= year_range[0]) & (df['year1'] <= year_range[1])]
     #print(diff)
     df_map = filtered_df
-    mapvars = ['gwcode1','gwcode2','Negative']
-    df_map = df_map[mapvars]
-    df_map['namesA'] = coco.CountryConverter().pandas_convert(series=df_map['gwcode1'], src='GWcode', to='name_short')
-    df_map['namesB'] = coco.CountryConverter().pandas_convert(series=df_map['gwcode2'], src='GWcode', to='name_short')
 
-    sankey = df_map.drop(['gwcode1','gwcode2'], axis=1)
+    sankey = df_map.drop(['speaker_country','target_country'], axis=1)
     sum_df = sankey.groupby(['namesA','namesB']).agg({'Negative': 'sum'})
     sum_df = sum_df.reset_index()
     sum_df.rename(columns={'namesA': 'source', 'namesB': 'target', 'Negative':'weight'}, inplace=True)
