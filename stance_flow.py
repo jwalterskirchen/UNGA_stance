@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-import country_converter as coco
 from d3blocks import D3Blocks
 import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
