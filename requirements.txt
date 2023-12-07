@@ -1,4 +1,3 @@
-d3blocks
+git+https://github.com/d3blocks/d3blocks.git
 pandas
-streamlit
 numpy
