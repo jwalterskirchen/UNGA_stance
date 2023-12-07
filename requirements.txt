@@ -1,0 +1,4 @@
+d3blocks
+pandas
+streamlit
+numpy
