@@ -5,7 +5,7 @@ from d3blocks import D3Blocks
 import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
 
-st.title('Hostile Rhetoric at the UN General Assembly: Using Aspect-Based Sentiment Analysis to Measure Relations between Member States')
+st.title('Friend or Foe: Using Aspect-Based Sentiment Analysis to Measure Relations between Member States at the UN General Assembly')
 #Loading the data
 @st.cache_data
 def get_data():
@@ -34,7 +34,7 @@ In this paper, we combine two innovations, namely aspect-based sentiment analysi
 Studying issued statements towards other countries, especially how positively or negatively they refer to each other, allows us to generate a comprehensive and dynamic measurement of interstate rhetoric.
 We assess the validity of our approach by comparing it to other conventional measures of interstate relations and by aligning it with actual cooperative and conflictual behavior in a time-series cross-sectional framework.
 We find that interstate rhetoric seems to better explain cooperative and conflictual behavior than most conventional approaches.
-However, our goal is not to replace those standard measures but rather to provide an additional dimension to the field of interstate relations.
+These results are promising and while we do not try to replace existing approaches it offers an additional lens through which to enhance our understanding of relations between countries.
 
 **What is this about?**
 This app serves as a companion to the above described paper and it allows users to explore which countries talk negatively about other countries in the UN General Assembly General Debate.
