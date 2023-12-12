@@ -63,8 +63,8 @@ with st.container():
     #print(diff)
     df_map = filtered_df
 
-    sankey = df_map.drop(['speaker_country','target_country'], axis=1)
-    sum_df = sankey.groupby(['namesA','namesB']).agg({'neg_count': 'sum'})
+    #sankey = df_map.drop(['speaker_country','target_country'], axis=1)
+    sum_df = df_map.groupby(['namesA','namesB']).agg({'neg_count': 'sum'})
     sum_df = sum_df.reset_index()
     sum_df.rename(columns={'namesA': 'source', 'namesB': 'target', 'neg_count':'weight'}, inplace=True)
     sum_df = sum_df.sort_values('weight', ascending=False).drop_duplicates(subset=['source', 'target'])
@@ -94,8 +94,8 @@ with st.container():
 
 st.markdown('#### Directed Positive Stance')
 with st.container():
-    sankey = df_map.drop(['speaker_country','target_country'], axis=1)
-    sum_df = sankey.groupby(['namesA','namesB']).agg({'pos_count': 'sum'})
+    #sankey = df_map.drop(['speaker_country','target_country'], axis=1)
+    sum_df = df_map.groupby(['namesA','namesB']).agg({'pos_count': 'sum'})
     sum_df = sum_df.reset_index()
     sum_df.rename(columns={'namesA': 'source', 'namesB': 'target', 'pos_count':'weight'}, inplace=True)
     sum_df = sum_df.sort_values('weight', ascending=False).drop_duplicates(subset=['source', 'target'])
