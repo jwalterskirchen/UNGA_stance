@@ -71,7 +71,7 @@ with st.container():
     sum_df.weight = sum_df.weight.astype(int)
     sum_df.weight = abs(sum_df.weight)
 
-    makes = [1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,70]
+    makes = [1,3,5,10,15,20,25,30]
     makes_1 = list(range(1,30,5))
     #default_idx = makes_1.index(diff-10)
     #makes_1 = sum_df.weight.astype(int)
@@ -79,7 +79,7 @@ with st.container():
     #make_choice = st.sidebar.selectbox('Select your minimum number of references:',
     #                                   options=sum_df['weight'].unique(), index=sum_df['weight'].unique().tolist().index(default_idx))
     make_choice = st.sidebar.selectbox('Select your minimum number of references:',
-                                       makes_1,
+                                       makes,
                                        index=2)
 
     sum_df = sum_df[sum_df.weight >= make_choice]
