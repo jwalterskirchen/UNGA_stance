@@ -72,7 +72,7 @@ with st.container():
     sum_df.weight = abs(sum_df.weight)
 
     makes = [1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,70]
-    makes_1 = list(range(5,30,5))
+    makes_1 = list(range(1,30,5))
     #default_idx = makes_1.index(diff-10)
     #makes_1 = sum_df.weight.astype(int)
     #default_idx = np.around(sum_df[sum_df['weight'] >= 3]["weight"].mean(), decimals=0) + 5
