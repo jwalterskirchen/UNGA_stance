@@ -80,7 +80,7 @@ with st.container():
     #                                   options=sum_df['weight'].unique(), index=sum_df['weight'].unique().tolist().index(default_idx))
     make_choice = st.sidebar.selectbox('Select your minimum number of references:',
                                        makes,
-                                       index=2)
+                                       index=4)
 
     sum_df = sum_df[sum_df.weight >= make_choice]
 
