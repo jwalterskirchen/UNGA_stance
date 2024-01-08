@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 from d3blocks import D3Blocks
 import streamlit.components.v1 as components
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="UNGA Stance", page_icon="flag-un")
 
 st.title('Friend or Foe: Using Aspect-Based Sentiment Analysis to Measure Relations between Member States at the UN General Assembly')
 #Loading the data
